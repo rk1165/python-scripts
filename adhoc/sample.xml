@@ -1,0 +1,23 @@
+<JMSMessageExport>
+    <mes:WLJMSMessage xmlns:mes="https://www.bea.com/WLS/JMS/Message">
+        <mes:Header>
+            <mes:JMSMessageID>message_id</mes:JMSMessageID>
+            <mes:JMSDeliveryMode>PERSISTENT</mes:JMSDeliveryMode>
+            <mes:JMSExpiration>1687412682166</mes:JMSExpiration>
+            <mes:JMSPriority>4</mes:JMSPriority>
+            <mes:JMSRedelivered>true</mes:JMSRedelivered>
+            <mes:JMSTimestamp>1686807882166</mes:JMSTimestamp>
+            <mes:Properties>
+                <mes:property name="MESTYP">
+                    <mes:String>SHPADV</mes:String>
+                </mes:property>
+                <mes:property name="StaticVariable">
+                    <mes:String>static var</mes:String>
+                </mes:property>
+            </mes:Properties>
+        </mes:Header>
+        <mes:Body>
+            <mes:Text>body</mes:Text>
+        </mes:Body>
+    </mes:WLJMSMessage>
+</JMSMessageExport>
