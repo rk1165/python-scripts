@@ -7,6 +7,7 @@ jms_message_export = ET.Element("JMSMessageExport")
 
 
 def create_xml():
+    """Creates a sample JMS XML message"""
     jms_message = ET.SubElement(jms_message_export, 'mes:WLJMSMessage', name_space)
     header = ET.SubElement(jms_message, 'mes:Header')
     body = ET.SubElement(jms_message, 'mes:Body')

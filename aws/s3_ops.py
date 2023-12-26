@@ -61,5 +61,5 @@ def get_all_versions(bucket, prefix):
 list_buckets()
 list_objects('fulfillment-repo')
 list_objects('fulfillment-repo', 'fulfillment/ds17')
-get_object('fulfillment-repo', 'fulfillment/ds17/file1.js')
 get_all_versions('fulfillment-repo', 'fulfillment/ds17/file1.js')
+get_object('fulfillment-repo', 'fulfillment/ds17/file1.js')

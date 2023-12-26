@@ -3,6 +3,7 @@ import sys
 
 # Enter your pagerduty API token here
 TOKEN = ''
+URL = "https://api.pagerduty.com/incidents"
 
 headers = {
     'Accept': 'application/vnd.pagerduty+json;version=2',
@@ -11,24 +12,24 @@ headers = {
 }
 
 
-# Get pagerduty incident details
 def get_incident_details(incident_id):
-    get_incident = f"https://api.pagerduty.com/incidents/{incident_id}"
+    """Get pagerduty incident details"""
+    get_incident = f"{URL}/{incident_id}"
     response = requests.get(get_incident, headers=headers)
     # print(response.json())
     return response.json()
 
 
-# Lists all notes related to an incident
 def list_incident_notes(incident_id):
-    list_notes = f"https://api.pagerduty.com/incidents/{incident_id}/notes"
+    """Lists all notes related to an incident"""
+    list_notes = f"{URL}/{incident_id}/notes"
     response = requests.get(list_notes, headers=headers)
     # print(response.json())
     return response.json()
 
 
-# Generates report for a specific incident
 def generate_report(incident_id):
+    """Generates a report in Markdown format for a specific incident id"""
     incident_details = get_incident_details(incident_id)
     incident_notes = list_incident_notes(incident_id)
 

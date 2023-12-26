@@ -31,3 +31,4 @@ def post_message(message):
 
 
 producer = init_kafka_producer()
+post_message("Hello Kafka")
